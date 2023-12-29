@@ -1,0 +1,341 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --background-color-header: #333;
+  --text-color-header: #fff;
+  --spacing-header: 20px;
+  --link-color: #fff;
+  --link-hover-color: #555;
+  --link-font-weight: bold;
+  --dropdown-background: #333;
+  --dropdown-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --content-padding: 20px;
+  --product-margin: 10px;
+  --product-padding: 10px;
+  --product-border: 1px solid #ccc;
+  --footer-background: #333;
+  --footer-text-color: #fff;
+  --welcome-banner-background: #f2f2f2;
+  --welcome-banner-text-color: #333;
+  --featured-products-padding: 20px;
+  --featured-products-text-color: #333;
+  --featured-products-border: 1px solid #ccc;
+  --featured-products-flex: 1;
+  --featured-products-max-width: 300px;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+body {
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--background-color-header);
+  color: var(--text-color-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em var(--spacing-header);
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: var(--spacing-header);
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: var(--link-font-weight);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--dropdown-background);
+  box-shadow: var(--dropdown-box-shadow);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-menu a {
+  color: var(--link-color);
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: var(--content-padding);
+}
+
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.product {
+  text-align: center;
+  margin: var(--product-margin);
+  padding: var(--product-padding);
+  border: var(--product-border);
+}
+
+footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.welcome-banner {
+  text-align: center;
+  padding: var(--content-padding);
+  background-color: var(--welcome-banner-background);
+}
+
+.new-product-banner {
+  margin-top: var(--content-padding);
+}
+
+.welcome-banner h2 {
+  color: var(--welcome-banner-text-color);
+}
+
+
+.new-product-banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.new-product-banner p {
+  text-align: center;
+  margin-top: var(--content-padding);
+  color: var(--link-hover-color);
+}
+
+.featured-products {
+  padding: var(--featured-products-padding);
+  text-align: center;
+}
+
+.featured-products h2 {
+  color: var(--featured-products-text-color);
+}
+
+.featured-products .products-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured-products .products-container .product {
+  text-align: center;
+  margin: var(--product-margin);
+  padding: var(--product-padding);
+  border: var(--featured-products-border);
+}
+
+.featured-products img {
+  max-width: 100%;
+  height: auto;
+}
+
+.new-arrivals {
+  padding: var(--featured-products-padding);
+  text-align: center;
+}
+
+.new-arrivals h2 {
+  color: var(--featured-products-text-color);
+}
+
+.new-arrivals .products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.new-arrivals .product {
+  text-align: center;
+  margin: var(--product-margin);
+  padding: var(--product-padding);
+  border: var(--featured-products-border);
+  flex: var(--featured-products-flex);
+  max-width: var(--featured-products-max-width);
+}
+
+.new-arrivals img {
+  max-width: 100%;
+  height: auto;
+}
+
+.special-offer {
+  padding: var(--featured-products-padding);
+  text-align: center;
+}
+
+.special-offer h2 {
+  color: var(--featured-products-text-color);
+}
+
+.special-offer .products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.special-offer .product {
+  text-align: center;
+  margin: var(--product-margin);
+  padding: var(--product-padding);
+  border: var(--featured-products-border);
+  flex: var(--featured-products-flex);
+  max-width: var(--featured-products-max-width);
+}
+
+.special-offer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.all-products h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.all-product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.all-product {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.product-view {
+  padding: var(--content-padding);
+  text-align: center;
+}
+
+.product-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.product-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details h2 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.product-details p {
+  color: #555;
+}
+
+.product-details .price {
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-details button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-form {
+  padding: var(--content-padding);
+  text-align: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+  text-align: left;
+}
+
+label {
+  color: #333;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
